@@ -9,7 +9,7 @@ import sys
 # Parameters
 TEST_PERCENTAGE = 20.0
 VALIDATION_PERCENTAGE = 10.0
-ORIGINAL_FOLDER = "processed"
+ORIGINAL_FOLDER = "original"
 CATEGORY_1 = "/one"
 CATEGORY_2 = "/ten"
 TRAIN_DESTINATION_FOLDER = "training"
