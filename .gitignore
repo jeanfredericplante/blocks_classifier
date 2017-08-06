@@ -1,3 +1,4 @@
 *.JPG
 processed
 .DS_Store
+.ec2rc
