@@ -1,6 +1,6 @@
 from __future__ import division,print_function
 import math, os, json, sys, re
-import pickle
+import cPickle as pickle
 from glob import glob
 import numpy as np
 from matplotlib import pyplot as plt
