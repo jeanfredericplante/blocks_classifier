@@ -142,6 +142,8 @@ class Vgg16():
         fname = 'vgg_jf.h5'
         self.model.save_weights(self.FILE_PATH+fname)
 
+    def get_model(self):
+        return self.model
     def get_batches(self, path, gen=image.ImageDataGenerator(), shuffle=True, batch_size=8, class_mode='categorical'):
         """
             Takes the path to a directory, and generates batches of augmented/normalized data. Yields batches indefinitely, in an infinite loop.
