@@ -16,9 +16,9 @@ Fast.ai de uses Theano as backend, which is not supported by coreml conversion t
 Beware that not all layers from Keras as supported by the CoreML conversion tools, in particular lambda layers. In the model derived in the fast.ai class, the lambda preprocess the images to normalize to the original weights for which the VGG model was trained. Fortunately, CoreML provides parameters to replace that functionality at the conversion layer.
 
 A possible approach:
- 1 - Fine tune the VGG model from fast.ai lesson 1 with your categories, save the weights
- 2 - Create a new model removing the lambda preprocessing layer, load your trained weights
- 3 - Use this model with the rgb - gbr, plus rgb offset as input of the CoreML convert function.
+ 1. Fine tune the VGG model from fast.ai lesson 1 with your categories, save the weights
+ 2. Create a new model removing the lambda preprocessing layer, load your trained weights
+ 3. Use this model with the rgb - gbr, plus rgb offset as input of the CoreML convert function.
 
 
 ### Get your environment ready
