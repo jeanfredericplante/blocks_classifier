@@ -1,4 +1,5 @@
 *.JPG
+!resources/*.jpg
 processed
 .DS_Store
 .ec2rc

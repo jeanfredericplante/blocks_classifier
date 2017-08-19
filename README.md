@@ -19,7 +19,7 @@ I used my iPhone in Burst mode to take photos of my 2 categories which are [Math
 
 With the burst mode, I took around 400 images for each categories in different backgrounds.
 Here is an example of block 1:
-![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/resources/one.png)
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/resources/one.jpg)
 
 And block 10:
-![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/resources/ten.png)
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/resources/ten.jpg)
