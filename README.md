@@ -9,10 +9,17 @@ As at the time of this writing CoreML doesn't support TensorFlow models. This is
 Neural networks can be converted to [CoreML](https://developer.apple.com/documentation/coreml/converting_trained_models_to_core_ml) format from Caffe and Keras.
 
 ## Fast.ai and Keras over Tensorflow to the rescue
-Fast.ai is a fantastic resource for practical deep learning. Within lesson one, i was able to create my trained model with over 97% accuracy and after some messing up convert it to CoreML. Here are the steps
+Fast.ai is a fantastic resource for practical deep learning. Within lesson one, i was able to create my trained model with over 97% accuracy and after some messing up convert it to CoreML. Here are the steps:
 
 ### Get your environment ready
-I created a docker image with the supported versions of Keras for CoreML
+I created a docker image with the supported versions of Keras for CoreML.
 
-## Getting a  docker image for Fast.ai setup
-https://hub.docker.com/r/deeprig/fastai-course-1/
+### Capturing your images
+I used my iPhone in Burst mode to take photos of my 2 categories which are [Math-U-See blocks](http://4.bp.blogspot.com/-Et6_8IvPOW0/VEPMsOiyVAI/AAAAAAAAPHo/Psw6lMVvAWo/s1600/Math%2BU%2BSee%2B(Review)06.jpg) for 1 and 10. With such different characteristics, distinct colors, I was thinking this would be a good way to start.
+
+With the burst mode, I took around 400 images for each categories in different backgrounds.
+Here is an example of block 1:
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/rresources/one.png)
+
+And block 10:
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/rresources/ten.png)
