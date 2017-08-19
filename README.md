@@ -19,7 +19,7 @@ A possible approach:
  1 - Fine tune the VGG model from fast.ai lesson 1 with your categories, save the weights
  2 - Create a new model removing the lambda preprocessing layer, load your trained weights
  3 - Use this model with the rgb - gbr, plus rgb offset as input of the CoreML convert function.
- 
+
 
 ### Get your environment ready
 I created a docker image with the supported versions of Keras for CoreML.
@@ -36,8 +36,10 @@ local_path_to_notebooks refers to the fast.ai notebooks, and notebooks from this
 I used my iPhone in Burst mode to take photos of my 2 categories which are [Math-U-See blocks](http://4.bp.blogspot.com/-Et6_8IvPOW0/VEPMsOiyVAI/AAAAAAAAPHo/Psw6lMVvAWo/s1600/Math%2BU%2BSee%2B(Review)06.jpg) for 1 and 10. With such different characteristics, distinct colors, I was thinking this would be a good way to start.
 
 With the burst mode, I took around 400 images for each categories in different backgrounds.
+
 Here is an example of block 1:
 ![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one.jpg)
 
 And block 10:
-![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one.jpg)
+
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/ten.jpg)
