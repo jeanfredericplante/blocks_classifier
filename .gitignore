@@ -3,3 +3,4 @@ processed
 .DS_Store
 .ec2rc
 *.h5
+*.mlmodel
