@@ -52,3 +52,8 @@ First you'll need to resize your images (and optionally remove your metadata). T
 
 #### Training, validation and test set
 ```create-test-train-set.py``` takes originals from your categories folder and creates a "training", "test" and "valid" folders with randomized. You can select the % allocated to each set.
+
+### Fine tuning VGG
+### Export to CoreML
+## Importing in an iPhone app
+### 
