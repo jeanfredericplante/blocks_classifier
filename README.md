@@ -22,7 +22,7 @@ A possible approach:
 
 
 ### Get your environment ready
-I created a docker image with the supported versions of Keras for CoreML.
+I created a docker image with  supported versions of Keras and TensorFlow for CoreML. It has Keras 1.2.2 and TensorFlow 1.0.1.
 https://hub.docker.com/r/jfplante/keras_tensorflow/
 
 This is derived from https://hub.docker.com/r/gw000/keras-full/ with additional packages needed including coremltools.
