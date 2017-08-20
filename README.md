@@ -33,7 +33,7 @@ docker run -d -p=6006:6006 -p=8888:8888 -v=local_path_to_notebooks:/srv jfplante
 local_path_to_notebooks refers to the fast.ai notebooks, and notebooks from this repo for model training and coreml conversion.
 
 ### Capturing your images
-I used my iPhone in Burst mode to take photos of my 2 categories which are [Math-U-See blocks](http://4.bp.blogspot.com/-Et6_8IvPOW0/VEPMsOiyVAI/AAAAAAAAPHo/Psw6lMVvAWo/s1600/Math%2BU%2BSee%2B(Review)06.jpg) for 1 and 10. With such different characteristics, distinct colors, I was thinking this would be a good way to start.
+I used my iPhone in Burst mode to take photos of my 2 categories which are [Math-U-See blocks](http://4.bp.blogspot.com/-Et6_8IvPOW0/VEPMsOiyVAI/AAAAAAAAPHo/Psw6lMVvAWo/s1600/Math%2BU%2BSee%2B(Review)06.jpg) for 1 and 10. With such different characteristics, distinct colors, it hopefully should be an easy job for the classifier.
 
 With the burst mode, I took around 400 images for each categories in different backgrounds.
 
@@ -43,3 +43,12 @@ Here is an example of block 1:
 And block 10:
 
 ![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/ten.jpg)
+
+After downloading your photos on you client, locate the bursts by looking at the location of of photo of the burst, and you'll find the other ones. Organize them in different folders for each category.
+
+### Preparing your training, validation and test sets
+#### Resizing and removing metadata from your images
+First you'll need to resize your images (and optionally remove your metadata). The ```resize_images.sh``` script uses utilities available on mac (including sips), creates a "processed" directory and resizes the images to a max of 640 px. The VGG model used as a base for fine-tuning uses images for 224x224 as input so you can further optimize there.
+
+#### Training, validation and test set
+```create-test-train-set.py``` takes originals from your categories folder and creates a "training", "test" and "valid" folders with randomized. You can select the % allocated to each set.
