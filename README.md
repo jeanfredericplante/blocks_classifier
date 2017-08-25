@@ -3,6 +3,7 @@
 Thanks to fine tuning, you don't require a super computer or a massive amounts of images to train an image classifier with a pretty incredible accuracy.
 
 This repo shows how to train your own classifier with the intent to transform it into a CoreML model.
+![](https://github.com/jeanfredericplante/block_count/blob/master/resources/v1.gif)
 
 As at the time of this writing CoreML doesn't support TensorFlow models. This is unfortunate as TensorFlow can do transfer learning from your categories in one line of code which is hard to beat ([see this article] (https://www.tensorflow.org/tutorials/image_retraining))
 
