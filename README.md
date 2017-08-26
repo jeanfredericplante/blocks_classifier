@@ -33,6 +33,10 @@ docker run -d -p=6006:6006 -p=8888:8888 -v=local_path_to_notebooks:/srv jfplante
 
 local_path_to_notebooks refers to the fast.ai notebooks, and notebooks from this repo for model training and coreml conversion.
 
+Notebooks should be available by loading your Jupyter notebooks from http://localhost:8888/tree/notebooks/nbs (password: keras)
+
+Navigate to inceptionv3_retraining notebook for training and CoreML conversion.
+
 ### Capturing your images
 I used my iPhone in Burst mode to take photos of my 2 categories which are [Math-U-See blocks](http://4.bp.blogspot.com/-Et6_8IvPOW0/VEPMsOiyVAI/AAAAAAAAPHo/Psw6lMVvAWo/s1600/Math%2BU%2BSee%2B(Review)06.jpg) for 1 and 10. With such different characteristics, distinct colors, it hopefully should be an easy job for the classifier.
 
@@ -55,6 +59,12 @@ First you'll need to resize your images (and optionally remove your metadata). T
 ```create-test-train-set.py``` takes originals from your categories folder and creates a "training", "test" and "valid" folders with randomized. You can select the % allocated to each set.
 
 ### Fine tuning VGG
+Notes: For my data set, retraining only the last layer laid to overfitting. 
+- Open inceptionv3_retraining notebook (planning to compare with Inception retraining)
+- Adjust parameters to your dataset categories
+
 ### Export to CoreML
+- Docker environment should have at least 12GB dedicated
 ## Importing in an iPhone app
 ###
+- Code in [block_count repo] (https://github.com/jeanfredericplante/block_count)

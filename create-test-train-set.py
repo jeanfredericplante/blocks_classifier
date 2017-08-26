@@ -7,8 +7,8 @@ import sys
 
 
 # Parameters
-TEST_PERCENTAGE = 20.0
-VALIDATION_PERCENTAGE = 10.0
+TEST_PERCENTAGE = 0.0
+VALIDATION_PERCENTAGE = 20.0
 ORIGINAL_FOLDER = "original"
 CATEGORY_1 = "/one"
 CATEGORY_2 = "/ten"
@@ -33,7 +33,7 @@ def get_training_validation_testing_sets(file_list, validation_ratio, testing_ra
     print "...Training size: ", train_split_index
     print "...Validation size: ", valid_split_index - train_split_index
     print "...Testing size: ", len(file_list)-valid_split_index
-
+    
     training = file_list[:train_split_index]
     validating = file_list[train_split_index+1:valid_split_index]
     testing = file_list[valid_split_index+1:]
