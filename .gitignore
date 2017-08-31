@@ -1,6 +1,5 @@
 *.zip
-*.JPG
-*.*.jpg
+*.jpg
 !resources/*.jpg
 processed
 .DS_Store
