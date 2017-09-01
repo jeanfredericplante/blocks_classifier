@@ -1,4 +1,6 @@
 *.zip
+cuda*.deb
+downloads
 *.jpg
 !resources/*.jpg
 processed
