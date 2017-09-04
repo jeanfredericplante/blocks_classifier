@@ -1,4 +1,7 @@
 *.zip
+*.pem
+*.csv
+ep2
 cuda*.deb
 downloads
 *.jpg
