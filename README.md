@@ -73,13 +73,13 @@ Notes: For my data set, retraining only the last layer laid to overfitting.
 ## Adding bounding boxes
 ### Fully Convolutional Model and heatmap
 - block_classifier_with_bounding_boxes notebook details a new fully fully convolutional model, where i plan to use the last layer to detect the bounding boxes.
-- By resizing my last convolutional layer with the number of classes (currently 2), if my model latches on the right thing I get a heatmap of my ones and ten. The idea is to automatically generate bounding boxes and recycle as input for a new model with bounding boxes output. Dropout definitely made a great difference in getting the model to latch on the right features.
+- By sizing my last convolutional layer with the number of classes (currently 2), if my model learns the right features I get a heatmap of my ones and tens. The idea is to automatically generate bounding boxes and recycle them as input for a new model with bounding boxes output. A nice side effect of the heatmap is to visualize overfitting and generalization capacity and Dropout definitely made a great difference in getting the model to latch on the right features.
 
-Block 1 with throughout Dropout 0.2 with heatmap overlay of last conv layer
+Block 1 with throughout Dropout 0.2 with heatmap overlay of last conv layer output
 
 ![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one_dropout02.png)
 
-Block 1 with throughout Dropout 0.6 with heatmap
+Block 1 with throughout Dropout 0.6 with heatmap overlay of last conv layer output
 
 ![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one_dropout06.png)
 
