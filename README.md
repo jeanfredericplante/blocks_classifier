@@ -59,12 +59,31 @@ First you'll need to resize your images (and optionally remove your metadata). T
 ```create-test-train-set.py``` takes originals from your categories folder and creates a "training", "test" and "valid" folders with randomized. You can select the % allocated to each set.
 
 ### Fine tuning VGG
-Notes: For my data set, retraining only the last layer laid to overfitting. 
+Notes: For my data set, retraining only the last layer laid to overfitting.
 - Open inceptionv3_retraining notebook (planning to compare with Inception retraining)
 - Adjust parameters to your dataset categories
 
 ### Export to CoreML
 - Docker environment should have at least 12GB dedicated
+- CoreML expects TensorFlow image ordering which is why you have to get the backend of keras as Tensorflow (i.e., shape of the image should be (img_rows, img_cols, 3))
+- CoreML doesn't support lambdas, so the normalization of the input should be done elsewhere. Thankfully, those are parameters that can be set as part of the convert function in CoreML as well as color channel ordering. VGG's training input bias is reflected below:
+```is_bgr=True, red_bias=-123.68, green_bias=-116.78, blue_bias=-103.94```
+
+
+## Adding bounding boxes
+### Fully Convolutional Model and heatmap
+- block_classifier_with_bounding_boxes notebook details a new fully fully convolutional model, where i plan to use the last layer to detect the bounding boxes.
+- By resizing my last convolutional layer with the number of classes (currently 2), if my model latches on the right thing I get a heatmap of my ones and ten. The idea is to automatically generate bounding boxes and recycle as input for a new model with bounding boxes output. Dropout definitely made a great difference in getting the model to latch on the right features.
+
+Block 1 with throughout Dropout 0.2 with heatmap overlay of last conv layer
+
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one_dropout02.png)
+
+Block 1 with throughout Dropout 0.6 with heatmap
+
+![Image of Block  1](https://github.com/jeanfredericplante/blocks_classifier/blob/master/resources/one_dropout06.png)
+
+
 ## Importing in an iPhone app
 ###
 - Code in [block_count repo] (https://github.com/jeanfredericplante/block_count)
