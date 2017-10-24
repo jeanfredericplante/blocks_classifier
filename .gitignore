@@ -1,4 +1,5 @@
 *.zip
+data
 precalc
 movielens
 *.pem
